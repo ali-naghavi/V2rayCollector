@@ -36,7 +36,9 @@ jobs:
         git checkout main
         git commit -m "✔️ $(date '+%Y-%m-%d %H:%M:%S') Collected"
     - name: split vless file
-      run: split ./vless_iran.txt -l 200
+      run: |
+        split ./vless_iran.txt -l 200 vl200
+        git add ./vl200*
     - name: Push Changes
       uses: ad-m/github-push-action@master
       with:
