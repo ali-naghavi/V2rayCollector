@@ -1,0 +1,2 @@
+#!bin/bash
+split vless_iran.txt -l 200
